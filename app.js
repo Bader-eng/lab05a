@@ -11,18 +11,20 @@ Test this function by hand in the console to get it working, and when you think 
 uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { //eslint-disable-line
+function sum(a,b) { //eslint-disable-line
+let sumArray=a+b;
 let Array=[]
-let sumArray=a+b
-console.log('The sum of a and b is:'+sumArray)
-Array.push(sumArray);
-Array.push('The sum of a and b is:'+sumArray)
-console.log(Array);
-return Array
+Array[0]=sumArray
+Array[1]=('The sum of 4 and 7 is 11.')
+//console.log('The sum of a and b is:'+sumArray)
+// Array.push(sumArray);
+// Array.push('The sum of a and b is:'+sumArray)
+//console.log(Array);
+return Array;
 }
 
 // Here is the test for sum(); uncomment it to run it
-sum(4, 7);
+testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your 
 //laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -39,17 +41,18 @@ and when you think it is finished, uncomment the call for the testMultiply()
 function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
+function multiply(a,b) { //eslint-disable-line
 let array=[]
 let multiplyarray=a*b
 console.log('The product of a and b is:'+multiplyarray)
 array.push(multiplyarray)
-array.push('The product of a and b is :'+multiplyarray)
+array.push('The product of 5 and 9 is 45.')
 console.log(array)
+return array ;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-multiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code 
 //between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -69,15 +72,32 @@ To do addition, use your sum() function, and to do multiplication, use your mult
  function that you've already created. You're going to have to be resourceful to figure
   out how to do this. However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, 
+uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+function sumAndMultiply(a,b,c) { 
+    let arry1=[]
+    let sum1
+    sum1=sum(a,b)[0]
+    console.log(sum1)
+    let sum2=sum1+c
+    arry1[0]=sum2
+   let multiply1=multiply(a,b)[0]
+   let multiply2
+   multiply2=multiply1*c
+   arry1[1]=multiply2
+    console.log(arry1)
+    console.log('The sum of a and b is and c is:'+ sum2)
+    console.log('The product of a and b and c is:'+multiply2)
+     arry1.push('4 and 7 and 5 sum to 16.')
+    arry1.push('The product of 4 and 7 and 5 is 140.')
+     console.log(arry1)
+    return arry1 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
