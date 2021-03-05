@@ -9,8 +9,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+let Array=[]
+let sumArray=a+b
+console.log('The sum of a and b is:'+sumArray)
+Array.push(sumArray);
+Array.push('The sum of a and b is:'+sumArray)
+console.log(Array);
+return Array
 }
+sum(7,5)
 
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
